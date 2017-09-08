@@ -1,0 +1,9 @@
+<section id="top" class="container">
+<main role="main" id="content" class="content_full_width">										               <h3><?=$message_title?></h3>
+
+<?php echo $message_content;?>
+
+               
+               </main><!-- END main #content -->
+            </section><!-- END main-area -->
+          
