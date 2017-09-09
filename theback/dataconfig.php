@@ -1,2 +1,2 @@
-<?php $mysqli = new mysqli("localhost", "bwin_newvisa","admin@123","bwin_trkyevisa");
+<?php $mysqli = new mysqli("localhost", "bwin_newvisa","!adm!n@123!_(>","bwin_trkyevisa");
 /* check connection */if (mysqli_connect_errno()) {    printf("Connect failed: %s\n", mysqli_connect_error());    exit();}?>

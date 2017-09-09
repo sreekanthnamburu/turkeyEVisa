@@ -50,7 +50,7 @@ $active_record = TRUE;
 
 $db['default']['hostname'] = 'localhost';
 $db['default']['username'] = 'bwin_newvisa';
-$db['default']['password'] = 'admin@123';
+$db['default']['password'] = '!adm!n@123!_(>';
 $db['default']['database'] = 'bwin_trkyevisa';
 $db['default']['dbdriver'] = 'mysql';
 $db['default']['dbprefix'] = '';
