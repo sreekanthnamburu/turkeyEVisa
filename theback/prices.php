@@ -37,10 +37,9 @@
                     </h1>
                 </div><!--/.page-header-->
                 <?php
-                $query = mysql_query('SELECT * FROM visa_prices WHERE id=1');
-
-                if(mysql_num_rows($query)>0){
-                    $res = mysql_fetch_assoc($query);
+                $query = $mysqli->query('SELECT * FROM visa_prices WHERE id=1');
+                if( $query->num_rows > 0 ){
+                    $res = $query->fetch_assoc();
                 }
                 ?>
                 <?php if (!empty($_SESSION['errorMsg'])) {
@@ -54,14 +53,14 @@
                     <label class="control-label" for="form-field-1">Normal (Guaranteed 2 working days)</label>
 
                     <div class="controls form-static">
-                        <input type="text" name="normal" id="normal" required>
+                        <input type="text" name="normal" id="normal" value="<?php if(!empty($res['normal'])) { echo $res['normal'];} ?>" required>
                     </div>
                 </div>
                 <div class="control-group">
                     <label class="control-label" for="form-field-1">Urgent (Guaranteed 4-8 hours)</label>
 
                     <div class="controls form-static">
-                        <input type="text" name="urgent" id="urgent" required>
+                        <input type="text" name="urgent" id="urgent" value="<?php if(!empty($res['urgent'])) { echo $res['urgent'];} ?>" required>
                     </div>
                 </div>
 
@@ -69,7 +68,7 @@
                     <label class="control-label" for="form-field-1">Immediate Service, Weekend & National Holidays
                         covered</label>
                     <div class="controls form-static">
-                        <input type="text" name="immediate" id="immediate" required>
+                        <input type="text" name="immediate" id="immediate" value="<?php if(!empty($res['immediate'])) { echo $res['immediate'];} ?>" required>
                     </div>
                 </div>
 
@@ -95,22 +94,11 @@
 <a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-small btn-inverse">
     <i class="icon-double-angle-up icon-only bigger-110"></i>
 </a>
-
-
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-
-
-<!--[if IE]>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-<![endif]-->
-
-<!--[if !IE]>-->
 
 <script type="text/javascript">
     window.jQuery || document.write("<script src='assets/js/jquery-2.0.3.min.js'>" + "<" + "/script>");
 </script>
-
-<!--<![endif]-->
 
 <!--[if IE]>
 <script type="text/javascript">
