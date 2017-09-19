@@ -22,8 +22,12 @@ public function view($page = 'home')
 		// Whoops, we don't have a page for that!
 		show_404();
 	}
-	 $this->load->model('application_model');
+	$query = $this->db->query("SELECT * FROM seoinformation WHERE page='".$page."'");
+	if ($query->num_rows() > 0) {
+		$data['seo'] = $query->result();
+	}
 
+	$this->load->model('application_model');
 	$data['title'] = ucfirst($page); // Capitalize the first letter
 	$data['countrylist']=$this->application_model->get_country();
 	$this->load->view(THEME.'/templates/header', $data);

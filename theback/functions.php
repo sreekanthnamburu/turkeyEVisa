@@ -32,3 +32,27 @@ if ($_POST['action'] == 'PRICES') {
 
     header("Location: prices.php");
 }
+
+if ($_POST['action'] == 'SEOINFORMATION') {
+
+    $page = $_POST['page'];
+    $title = $_POST['title'];
+    $description = $_POST['description'];
+    $keywords = $_POST['keywords'];
+
+    $query1 = $mysqli->query("SELECT * FROM seoinformation WHERE page='".$page."'");
+    if ($query1->num_rows > 0) {
+        $query = "UPDATE seoinformation SET page='".$page."', title='" . $title . "', description='" . $description . "', keywords='" . $keywords . "' WHERE page='".$page."'";
+        $_SESSION['errorMsg'] = '<p style="color:green">Successfully Updated Seo Information for Page: '.$page.'</p>';
+    } else {
+        $query = "INSERT INTO seoinformation SET page='".$page."',title='" . $title . "', description='" . $description . "', keywords='" . $keywords . "'";
+        $_SESSION['errorMsg'] = '<p style="color:green">Successfully Inserted Seo Information for Page: '.$page.'</p>';
+    }
+
+    if (!$mysqli->query($query)) {
+        $err = $st->errorInfo();
+        die("Error in query: $query . " . $mysqli->error);
+    }
+
+    header("Location: seoinformation.php");
+}

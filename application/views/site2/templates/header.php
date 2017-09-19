@@ -6,7 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
  <meta name="google-site-verification" content="5mPXfdzdo22Ie3fGDVBsUNj3L6ON3aeSA9D4sGlFf78" />
 <!-- Global Site Tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-104059207-1"></script>
+  <?php
+  ?>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-104059207-1"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments)};
@@ -14,9 +17,23 @@
 
   gtag('config', 'UA-104059207-1');
 </script>
- <title>Quick Turkey Visa - individual and Group visa in 30 minutes</title>
-<meta name="description" content="3 Easy Steps to obtaining Turkey e-Visa, Apply for your individual, Family or Group Turkey Visa by utilising our secure online service. Apply Now"/>
-<meta name="keywords" content=" Turkey Visa, Turkish visa, Turkey evisa, Visa for Turkey, Turkey visa application, Turkey visa requirements"> 
+ <title> <?php if (!empty($seo[0]->title)) {
+     echo $seo[0]->title;
+   } else {
+     echo 'Quick Turkey Visa - individual and Group visa in 30 minutes';
+   } ?></title>
+<meta name="description" content="<?php
+if (!empty($seo[0]->description)) {
+  echo $seo[0]->description;
+} else {
+  echo '3 Easy Steps to obtaining Turkey e-Visa, Apply for your individual, Family or Group Turkey Visa by utilising our secure online service. Apply Now';
+} ?>"/>
+<meta name="keywords" content="<?php
+if (!empty($seo[0]->keywords)) {
+  echo $seo[0]->keywords;
+} else {
+  echo 'Turkey Visa, Turkish visa, Turkey evisa, Visa for Turkey, Turkey visa application, Turkey visa requirements';
+}?>">
  
  <!-- Bootstrap -->
   <link href="<?php echo BASETHEMEPATH;?>css/bootstrap.css" rel="stylesheet">

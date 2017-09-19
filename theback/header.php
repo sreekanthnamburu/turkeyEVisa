@@ -192,6 +192,7 @@ $user=$result->fetch_assoc();
     </ul>
   </li>
   <?php if($_SESSION['role'] =='admin'){?>
+      <li> <a href="seoinformation.php"> <i class="icon-envelope"></i> <span class="menu-text"> Seo </span> </a> </li>
       <li> <a href="prices.php"> <i class="icon-envelope"></i> <span class="menu-text"> Prices </span> </a> </li>
       <li> <a href="users.php"> <i class="icon-user"></i> <span class="menu-text"> Users </span> </a> </li>
      <li> <a href="templates.php"> <i class="icon-envelope"></i> <span class="menu-text"> Email Templates </span> </a> </li>

@@ -775,9 +775,7 @@ class Application extends CI_Controller
                 //$this->email->cc('rajendraprasad775@gmail.com');
 
                 //$email_body="You are selected";
-/*
-              <p style="font-family: \'Helvetica Neue\', \'Helvetica\', Helvetica, Arial, sans-serif; font-size: 14px; line-height: 1.6; font-weight: normal; margin: 0 0 10px; padding: 0;">This email stands to confirm that we have received your Turkey e-Visa application, Please note that your e-Visa has been processed. So try to pay via the link mentioned below, If you have already paid please ignore this.</p>
-<p style="font-family: \'Helvetica Neue\', \'Helvetica\', Helvetica, Arial, sans-serif; font-size: 14px; line-height: 1.6; font-weight: normal; margin: 0 0 10px; padding: 0;"><b>Your payment can be accepted through Debit/ Credit Card or Paypal Gateway.</b><br/><a href="' . base_url() . 'index.php/application/payments/' . $reference_number . '" style="font-family: \'Helvetica Neue\', \'Helvetica\', Helvetica, Arial, sans-serif; font-size: 100%; line-height: 2; color: #FFF; text-decoration: none; background-color: green;background-image:-moz-linear-gradient(center top , #5cb85c,#4cae4c);box-shadow: 0 0 0 1px #green, 0 0 0 2px #green;   border: 0 none;cursor: pointer;margin: 5px 10px 10px 0;font-weight:bold;padding:10px;border-radius:4px">Pay&nbsp;Now</a></p>*/
+
 
                 $this->email->subject("Application Created for REF:" . $reference_number);
 
