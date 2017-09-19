@@ -4,9 +4,29 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Quick Turkey Visa - individual and Group visa in 30 minutes</title>
-<meta name="description" content="3 Easy Steps to obtaining your e-Visa. Apply for your individual, Family or Group e-Visa by utilising our secure online service."/>
-<meta name="keywords" content=" Turkey Visa, Turkish visa, Turkey evisa, Visa for Turkey, Turkey visa application, Turkey visa requirements">
+<title><?php
+    $query = $this->db->query("SELECT * FROM seoinformation WHERE page='application'");
+    if ($query->num_rows() > 0) {
+        $seo = $query->result();
+    }
+    if (!empty($seo[0]->title)) {
+        echo stripslashes($seo[0]->title);
+    } else {
+    echo 'Quick Turkey Visa - individual and Group visa in 30 minutes';
+    }
+    ?></title>
+<meta name="description" content="<?php
+if (!empty($seo[0]->description)) {
+    echo stripslashes($seo[0]->description);
+} else {
+echo '3 Easy Steps to obtaining your e-Visa. Apply for your individual, Family or Group e-Visa by utilising our secure online service.';
+} ?>"/>
+<meta name="keywords" content="<?php
+if (!empty($seo[0]->keywords)) {
+    echo stripslashes($seo[0]->keywords);
+} else {
+    echo 'Turkey Visa, Turkish visa, Turkey evisa, Visa for Turkey, Turkey visa application, Turkey visa requirements.';
+} ?> ">
   <!-- Bootstrap -->
   <link href="<?php echo BASETHEMEPATH;?>css/bootstrap.css" rel="stylesheet">
 

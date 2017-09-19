@@ -36,9 +36,9 @@ if ($_POST['action'] == 'PRICES') {
 if ($_POST['action'] == 'SEOINFORMATION') {
 
     $page = $_POST['page'];
-    $title = $_POST['title'];
-    $description = $_POST['description'];
-    $keywords = $_POST['keywords'];
+    $title = addslashes($_POST['title']);
+    $description = addslashes($_POST['description']);
+    $keywords = addslashes($_POST['keywords']);
 
     $query1 = $mysqli->query("SELECT * FROM seoinformation WHERE page='".$page."'");
     if ($query1->num_rows > 0) {

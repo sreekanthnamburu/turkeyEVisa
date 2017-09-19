@@ -18,19 +18,19 @@
   gtag('config', 'UA-104059207-1');
 </script>
  <title> <?php if (!empty($seo[0]->title)) {
-     echo $seo[0]->title;
+     echo stripslashes($seo[0]->title);
    } else {
      echo 'Quick Turkey Visa - individual and Group visa in 30 minutes';
    } ?></title>
 <meta name="description" content="<?php
 if (!empty($seo[0]->description)) {
-  echo $seo[0]->description;
+  echo stripslashes($seo[0]->description);
 } else {
   echo '3 Easy Steps to obtaining Turkey e-Visa, Apply for your individual, Family or Group Turkey Visa by utilising our secure online service. Apply Now';
 } ?>"/>
 <meta name="keywords" content="<?php
 if (!empty($seo[0]->keywords)) {
-  echo $seo[0]->keywords;
+  echo stripslashes($seo[0]->keywords);
 } else {
   echo 'Turkey Visa, Turkish visa, Turkey evisa, Visa for Turkey, Turkey visa application, Turkey visa requirements';
 }?>">

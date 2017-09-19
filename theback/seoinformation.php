@@ -35,10 +35,14 @@
                     <h1>
                         Prices
                     </h1>
-                    <p style="font-size: 11px;">HELP TEXT <br>
+                    <p style="font-size: 11px;
+    background-color: grey;
+    padding: 5px;
+    color: white;
+    border-radius: 5px;">HELP TEXT <br>
                         <b>Page</b> : Enter the last part of the url as Page Name.<br>
                         If you want to maintain seo for https://www.turkeyevisa.online/index.php/visa-fees, you have to
-                        enter page name as "visa-fees"</p>
+                        enter Page Name as "visa-fees"</p>
                 </div><!--/.page-header-->
                 <?php if (!empty($_SESSION['errorMsg'])) {
                     echo $_SESSION['errorMsg'];
@@ -55,7 +59,7 @@
                     <a href="seoinformation.php" class="btn btn-success">Back to Pages</a>
                     <form class="form-horizontal" action="functions.php" method="post"/>
                     <div class="control-group">
-                        <label class="control-label" for="form-field-1">Page</label>
+                        <label class="control-label" for="form-field-1">Page Name</label>
 
                         <div class="controls form-static">
                             <input type="text" name="page" id="page" value="<?php if(isset($res['page']) && !empty($res['page'])) { echo $res['page'];} ?>" required>
@@ -65,21 +69,21 @@
                         <label class="control-label" for="form-field-1">Title</label>
 
                         <div class="controls form-static">
-                            <input type="text" name="title" id="title" value="<?php if(isset($res['title']) && !empty($res['title'])) { echo $res['title'];} ?>" required>
+                            <input type="text" name="title" id="title" value="<?php if(isset($res['title']) && !empty($res['title'])) { echo stripslashes($res['title']);} ?>" required>
                         </div>
                     </div>
 
                     <div class="control-group">
                         <label class="control-label" for="form-field-1">Description</label>
                         <div class="controls form-static">
-                            <textarea type="text" name="description" id="description" value="" required><?php if(isset($res['description']) && !empty($res['description'])) { echo $res['description'];} ?></textarea>
+                            <textarea type="text" name="description" id="description" value="" required><?php if(isset($res['description']) && !empty($res['description'])) { echo stripslashes($res['description']);} ?></textarea>
                         </div>
                     </div>
 
                     <div class="control-group">
                         <label class="control-label" for="form-field-1">Keywords</label>
                         <div class="controls form-static">
-                            <textarea type="text" name="keywords" id="keywords" value="" required><?php if(isset($res['keywords']) && !empty($res['keywords'])) { echo $res['keywords'];} ?></textarea>
+                            <textarea type="text" name="keywords" id="keywords" value="" required><?php if(isset($res['keywords']) && !empty($res['keywords'])) { echo stripslashes($res['keywords']);} ?></textarea>
                         </div>
                     </div>
 
